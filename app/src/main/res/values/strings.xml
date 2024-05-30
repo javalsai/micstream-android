@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">micstream</string>
+    <string name="host_port">host:port</string>
+    <string name="connect">Connect</string>
+    <string name="connect_colon">Connect:</string>
+    <string name="running_in_dev_mode">Running in Dev Mode</string>
+    <string name="speak_button">Speak Button</string>
+    <string name="somehost_port">somehost:port</string>
+    <string name="bufsize">BufSize</string>
+
+    <string-array name="size_units">
+        <item>B</item>
+        <item>K</item>
+        <item>Ki</item>
+        <item>M</item>
+        <item>Mi</item>
+    </string-array>
+</resources>

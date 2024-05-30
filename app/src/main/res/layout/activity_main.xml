@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/connect_dialog">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_colon"
+                android:textSize="48sp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/host" android:textSize="24sp" android:hint="@string/host_port"
+                android:textColorHint="#A1887F" android:autofillHints=""/>
+        <Button
+                android:text="@string/connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/hosts_list"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:background="#FFEB3B" android:id="@+id/dev_warn">
+        <TextView
+                android:text="@string/running_in_dev_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:visibility="invisible"
+                tools:visibility="visible" android:textSize="16sp" android:textAlignment="center"
+                android:textColor="#000000"/>
+    </LinearLayout>
+    <ImageButton
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/mute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" android:background="#B1B1B1" android:padding="20sp"
+            tools:circularflow_defaultRadius="10sp" tools:circularflow_radiusInDP="10000sp"
+            android:contentDescription="@string/speak_button"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:id="@+id/bufCont"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp">
+        <EditText
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:id="@+id/bufSize" android:hint="@string/bufsize" android:textSize="24sp"/>
+        <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/bufUnit" android:layout_weight="1"
+                android:dropDownWidth="wrap_content" android:entries="@array/size_units" android:minHeight="48dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
